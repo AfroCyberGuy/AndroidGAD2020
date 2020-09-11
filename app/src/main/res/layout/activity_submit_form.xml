@@ -14,11 +14,11 @@
         android:layout_marginStart="8dp"
         android:src="@drawable/grad_image"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/imgBack"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imgBack"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
@@ -39,39 +39,41 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/etStudentName"
         android:layout_width="0dp"
         android:layout_height="44dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
+        android:paddingLeft="8dp"
         android:background="@drawable/text_shape"
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
         android:hint="Name"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName2"
+        app:layout_constraintEnd_toStartOf="@+id/etStudentLastName"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/etStudentLastName"
         android:layout_width="0dp"
         android:layout_height="44dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/text_shape"
+        android:paddingLeft="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
         android:hint="Last Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName" />
+        app:layout_constraintStart_toEndOf="@+id/etStudentName"
+        app:layout_constraintTop_toTopOf="@+id/etStudentName" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/etStudentEmailAddress"
         android:layout_width="0dp"
         android:layout_height="44dp"
         android:layout_marginTop="24dp"
@@ -79,23 +81,39 @@
         android:inputType="textPersonName"
         android:text=""
         android:hint="Email Address"
+        android:paddingLeft="8dp"
         android:background="@drawable/text_shape"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintEnd_toEndOf="@+id/etStudentLastName"
+        app:layout_constraintStart_toStartOf="@+id/etStudentName"
+        app:layout_constraintTop_toBottomOf="@+id/etStudentName" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/etProjectLink"
         android:layout_width="0dp"
         android:layout_height="44dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
+        android:paddingLeft="8dp"
         android:hint="Project on GITHUB (link)"
         android:background="@drawable/text_shape"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName3"
+        app:layout_constraintEnd_toEndOf="@+id/etStudentEmailAddress"
         app:layout_constraintHorizontal_bias="0.55"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName3"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+        app:layout_constraintStart_toStartOf="@+id/etStudentEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/etStudentEmailAddress" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="64dp"
+        android:background="@drawable/button_shape"
+        android:text="Submit"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/etProjectLink"
+        app:layout_constraintStart_toStartOf="@+id/etProjectLink"
+        app:layout_constraintTop_toBottomOf="@+id/etProjectLink" />
 </androidx.constraintlayout.widget.ConstraintLayout>
